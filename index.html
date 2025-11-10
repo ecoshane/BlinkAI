@@ -4,14 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlinkAI - 專為粉絲打造的 AI 知識庫與助理</title>
-    <!-- 引入 Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- 引入 Google Fonts - Poppins & Lato -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- 引入 Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 Google Fonts - Poppins & Lato --><link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-    <!-- 引入 Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- 引入 Font Awesome Icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         /* ------------------------- 共同樣式 ------------------------- */
         body {
@@ -132,10 +129,8 @@
 </head>
 <body class="antialiased">
 
-    <!-- 1. 官網視圖 (Landing Page) -->
-    <div id="landing-page">
-        <!-- 導航欄 -->
-        <nav class="sticky top-0 z-50 w-full shadow-lg">
+    <!-- 1. 官網視圖 (Landing Page) --><div id="landing-page">
+        <!-- 導航欄 --><nav class="sticky top-0 z-50 w-full shadow-lg">
             <div class="container mx-auto px-6 py-4 flex justify-between items-center">
                 <h1 class="text-3xl font-bold text-primary">BlinkAI</h1>
                 <div class="hidden md:flex space-x-6 items-center">
@@ -144,47 +139,38 @@
                     <a href="#tech" class="text-gray-300 hover:text-primary transition">核心技術</a>
                     <a href="#pricing" class="text-gray-300 hover:text-primary transition">定價方案</a>
                     <a href="#roadmap" class="text-gray-300 hover:text-primary transition">未來藍圖</a>
-                    <!-- 連結到 AI 助理視圖 -->
-                    <a href="#" onclick="showChatView(); return false;" class="btn btn-primary !px-5 !py-2 !text-base">搶先體驗</a>
+                    <!-- 連結到 AI 助理視圖 --><a href="#" onclick="showChatView(); return false;" class="btn btn-primary !px-5 !py-2 !text-base">搶先體驗</a>
                 </div>
-                <!-- Mobile Menu Button (optional) -->
-            </div>
+                <!-- Mobile Menu Button (optional) --></div>
         </nav>
 
-        <!-- Hero 區塊 -->
-        <header class="hero-bg relative">
+        <!-- Hero 區塊 --><header class="hero-bg relative">
             <div class="container mx-auto px-6 py-32 md:py-48 text-center text-white">
                 <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">BlinkAI</h1>
-                <p class="text-2xl md:text-3xl font-light mb-10 text-secondary">為粉絲準確性與互動參與而生的專精 AI 平台</p>
+                <!-- 【修改點 2: 文字間距】增加 mb-12 讓文字往下移一點 --><p class="text-2xl md:text-3xl font-light mb-12 text-secondary">為粉絲準確性與互動參與而生的專精 AI 平台</p>
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <!-- 【修改點 1: Hero 按鈕】使其更顯眼 -->
-                    <a href="#" onclick="showChatView(); return false;" class="btn btn-primary !text-xl !py-4 !px-8 shadow-2xl shadow-pink-500/50 hover:shadow-pink-500/80 hover:scale-[1.07] transition-all duration-500">搶先試用 AI 助理</a>
-                    <!-- REMOVED: <a href="#cta" class="btn btn-outline">加入等待清單</a> -->
+                    <!-- 【修改點 1: Hero 按鈕】調整陰影和懸停效果 --><a href="#" onclick="showChatView(); return false;" class="btn btn-primary !text-xl !py-4 !px-8 shadow-lg shadow-pink-500/30 hover:shadow-pink-500/50 hover:scale-105 transition-all duration-500">搶先試用 AI 助理</a>
                 </div>
             </div>
         </header>
 
-        <!-- 市場痛點 (The Problem) -->
-        <section id="problem" class="py-24 gradient-bg">
+        <!-- 市場痛點 (The Problem) --><section id="problem" class="py-24 gradient-bg">
             <div class="container mx-auto px-6">
                 <h2 class="section-title">粉絲資訊的危機</h2>
                 <p class="section-subtitle">K-pop 的爆炸性增長創造了一個龐大但混亂的數據生態系統。粉絲在獲取可信資訊時，正面臨前所未有的挑戰。</p>
                 
                 <div class="grid md:grid-cols-3 gap-8">
-                    <!-- 痛點 1 -->
-                    <div class="feature-card">
+                    <!-- 痛點 1 --><div class="feature-card">
                         <div class="icon"><i class="fa-solid fa-circle-exclamation"></i></div>
                         <h3 class="text-2xl font-bold text-white mb-4">資訊過載與錯誤</h3>
                         <p class="text-gray-300">網路充斥著粉絲猜測、錯誤翻譯和過時內容。事實與謠言混雜，導致粉絲對關鍵事件（如歌曲製作人、MV隱喻）產生認知混淆。</p>
                     </div>
-                    <!-- 痛點 2 -->
-                    <div class="feature-card">
+                    <!-- 痛點 2 --><div class="feature-card">
                         <div class="icon"><i class="fa-solid fa-robot"></i></div>
                         <h3 class="text-2xl font-bold text-white mb-4">通用 AI 的「幻覺」</h3>
                         <p class="text-gray-300">通用 AI 為了回答問題，會捏造事實（例如：Lisa 是隊長、虛構的巡演日期），對尋求準確資訊的粉絲造成嚴重困擾。</p>
                     </div>
-                    <!-- 痛點 3 -->
-                    <div class="feature-card">
+                    <!-- 痛點 3 --><div class="feature-card">
                         <div class="icon"><i class="fa-solid fa-baby"></i></div>
                         <h3 class="text-2xl font-bold text-white mb-4">新粉絲的高門檻</h3>
                         <p class="text-gray-300">"Baby Blinks" 難以快速區分官方事實與粉絲理論。入坑的學習曲線陡峭，且在社群中提問時可能面臨壓力。</p>
@@ -193,8 +179,7 @@
             </div>
         </section>
 
-        <!-- 解決方案 (The Solution) -->
-        <section id="solution" class="py-24">
+        <!-- 解決方案 (The Solution) --><section id="solution" class="py-24">
             <div class="container mx-auto px-6">
                 <div class="grid md:grid-cols-2 gap-16 items-center">
                     <div>
@@ -210,21 +195,18 @@
                         <p class="mb-4 text-gray-300">核心技術 RAG (檢索增強生成)，能確保 AI 的每一個回答都有「事實依據」，從根本上杜絕「幻覺」和「粉絲猜測」。</p>
                         <h3 class="text-2xl font-semibold text-white mb-4">平台特性</h3>
                         <p class="text-gray-300 mb-6">這是一個為全球 Blinks 打造的、7x24 小時、多平台（Web, Discord, LINE）支援、絕對準確的 AI 夥伴。</p>
-                        <!-- 連結到 AI 助理視圖 -->
-                        <a href="#" onclick="showChatView(); return false;" class="btn btn-primary !text-lg !inline-block mt-4">立即試用 BlinkAI 助理</a>
+                        <!-- 連結到 AI 助理視圖 --><a href="#" onclick="showChatView(); return false;" class="btn btn-primary !text-lg !inline-block mt-4">立即試用 BlinkAI 助理</a>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- 核心技術 (Technology) -->
-        <section id="tech" class="py-24 gradient-bg">
+        <!-- 核心技術 (Technology) --><section id="tech" class="py-24 gradient-bg">
             <div class="container mx-auto px-6">
                 <h2 class="section-title">BlinkAI 核心技術</h2>
                 <p class="section-subtitle">BlinkAI 的準確性來自其嚴謹的雙重技術架構：專有知識庫與 RAG 工作流程。</p>
                 
-                <!-- 技術 1: 知識庫 -->
-                <div class="grid md:grid-cols-2 gap-16 items-center mb-20">
+                <!-- 技術 1: 知識庫 --><div class="grid md:grid-cols-2 gap-16 items-center mb-20">
                     <div>
                         <h3 class="text-3xl font-bold text-white mb-4">技術 I：BlinkAI 知識庫</h3>
                         <p class="text-lg text-gray-300 mb-6">BlinkAI 的強大不在於 LLM，而在於其「專有的知識庫」。我們僅從經過驗證的官方來源獲取資料，建立一個純淨的向量資料庫 (Vector DB)，作為 AI 回答的唯一事實來源。</p>
@@ -242,8 +224,7 @@
                     </div>
                 </div>
 
-                <!-- 技術 2: RAG -->
-                <div class="grid md:grid-cols-2 gap-16 items-center">
+                <!-- 技術 2: RAG --><div class="grid md:grid-cols-2 gap-16 items-center">
                     <div class="md:order-2">
                         <h3 class="text-3xl font-bold text-white mb-4">技術 II：RAG 工作流程</h3>
                         <p class="text-lg text-gray-300 mb-6">我們利用 RAG 流程嚴格控制 AI の輸出，作為 AI の「事實韁繩」：</p>
@@ -263,14 +244,12 @@
             </div>
         </section>
         
-        <!-- 用戶畫像 (Personas) -->
-        <section id="personas" class="py-24">
+        <!-- 用戶畫像 (Personas) --><section id="personas" class="py-24">
             <div class="container mx-auto px-6">
                 <h2 class="section-title">為每一種粉絲而生</h2>
                 <p class="section-subtitle">無論你是剛入坑的新粉，還是資深內容創作者，BlinkAI 都能提供你需要的價值。</p>
                 <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Persona 1 -->
-                    <div class="glass-card p-8 rounded-2xl transition-all duration-300 hover:border-primary">
+                    <!-- Persona 1 --><div class="glass-card p-8 rounded-2xl transition-all duration-300 hover:border-primary">
                         <img src="https://placehold.co/200x200/1f2937/f472b6?text=Jenny" 
                              alt="" 
                              class="w-24 h-24 rounded-full mx-auto mb-6 border-4 border-primary object-cover">
@@ -279,8 +258,7 @@
                         <p class="text-gray-300"><strong class="text-secondary">痛點：</strong>資訊混亂，怕問「笨問題」被資深粉絲嘲笑。</p>
                         <p class="text-gray-300"><strong class="text-secondary">需要：</strong>一個安全、準確、可隨時提問的 24/7 嚮導。</p>
                     </div>
-                    <!-- Persona 2 -->
-                    <div class="glass-card p-8 rounded-2xl transition-all duration-300 hover:border-primary">
+                    <!-- Persona 2 --><div class="glass-card p-8 rounded-2xl transition-all duration-300 hover:border-primary">
                         <img src="https://images.unsplash.com/photo-1557862921-3e16092bb49c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyNjA5NjYyNw&q=80&w=400" 
                              alt="" 
                              class="w-24 h-24 rounded-full mx-auto mb-6 border-4 border-primary object-cover"
@@ -290,8 +268,7 @@
                         <p class="text-gray-300"><strong class="text-secondary">痛點：</strong>查核 MV 導演、歌曲製作人等事實耗時費力。</p>
                         <p class="text-gray-300"><strong class="text-secondary">需要：</strong>一個可信賴的「單一事實來源 (SSOT)」資料庫。</p>
                     </div>
-                    <!-- Persona 3 -->
-                    <div class="glass-card p-8 rounded-2xl transition-all duration-300 hover:border-primary">
+                    <!-- Persona 3 --><div class="glass-card p-8 rounded-2xl transition-all duration-300 hover:border-primary">
                         <img src="https://images.unsplash.com/photo-1507591064343-9af923e232b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyNjA5NjYyNw&q=80&w=400" 
                              alt="" 
                              class="w-24 h-24 rounded-full mx-auto mb-6 border-4 border-primary object-cover"
@@ -305,14 +282,12 @@
             </div>
         </section>
 
-        <!-- 定價方案 (Pricing) -->
-        <section id="pricing" class="py-24 gradient-bg">
+        <!-- 定價方案 (Pricing) --><section id="pricing" class="py-24 gradient-bg">
             <div class="container mx-auto px-6">
                 <h2 class="section-title">選擇適合你的方案</h2>
                 <p class="section-subtitle">從免費開始，或升級以獲得無限可能。所有方案皆基於我們強大的 RAG 核心。</p>
                 <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                    <!-- 方案 1: Freemium -->
-                    <div class="glass-card p-8 rounded-2xl border-2 border-gray-700 flex flex-col">
+                    <!-- 方案 1: Freemium --><div class="glass-card p-8 rounded-2xl border-2 border-gray-700 flex flex-col">
                         <h3 class="text-2xl font-bold text-white text-center mb-2">Freemium</h3>
                         <p class="text-gray-400 text-center mb-6">適合新粉絲與輕度使用者</p>
                         <p class="text-5xl font-extrabold text-white text-center mb-6">$0<span class="text-lg text-gray-400"> USD</span></p>
@@ -321,11 +296,9 @@
                             <li class="flex items-center"><i class="fa-solid fa-check text-primary mr-3"></i> 存取標準知識庫</li>
                             <li class="flex items-center"><i class="fa-solid fa-check text-primary mr-3"></i> Discord & Web 支援</li>
                         </ul>
-                        <!-- 【修改點 2: Freemium 按鈕】改為實心，使其更醒目 -->
-                        <a href="#" onclick="showChatView(); return false;" class="w-full text-center btn btn-primary">立即開始</a>
+                        <!-- Freemium 按鈕保持實心，使其更醒目 --><a href="#" onclick="showChatView(); return false;" class="w-full text-center btn btn-primary">立即開始</a>
                     </div>
-                    <!-- 方案 2: Blink Plus (Most Popular) -->
-                    <div class="glass-card p-8 rounded-2xl border-2 border-primary flex flex-col shadow-2xl relative">
+                    <!-- 方案 2: Blink Plus (Most Popular) --><div class="glass-card p-8 rounded-2xl border-2 border-primary flex flex-col shadow-2xl relative">
                         <span class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-primary text-gray-900 text-sm font-bold px-4 py-1 rounded-full">最受歡迎</span>
                         <h3 class="text-2xl font-bold text-primary text-center mb-2">Blink Plus</h3>
                         <p class="text-gray-400 text-center mb-6">適合內容創作者與資深粉絲</p>
@@ -338,8 +311,7 @@
                         </ul>
                         <a href="#cta" class="w-full text-center btn btn-primary">立即升級</a>
                     </div>
-                    <!-- 方案 3: Media API -->
-                    <div class="glass-card p-8 rounded-2xl border-2 border-gray-700 flex flex-col">
+                    <!-- 方案 3: Media API --><div class="glass-card p-8 rounded-2xl border-2 border-gray-700 flex flex-col">
                         <h3 class="text-2xl font-bold text-white text-center mb-2">Media API</h3>
                         <p class="text-gray-400 text-center mb-6">適合媒體、品牌與開發者</p>
                         <p class="text-4xl font-extrabold text-white text-center mb-6">企業報價<span class="text-lg text-gray-400"> (USD)</span></p>
@@ -354,26 +326,22 @@
             </div>
         </section>
 
-        <!-- 商業模式 (Business Model) -->
-        <section id="model" class="py-24">
+        <!-- 商業模式 (Business Model) --><section id="model" class="py-24">
             <div class="container mx-auto px-6">
                 <h2 class="section-title">可持續的商業模式</h2>
                 <p class="section-subtitle">BlinkAI 不只是一個工具，更是一個完整的商業生態系統。</p>
                 <div class="grid md:grid-cols-3 gap-8 text-center">
-                    <!-- 價值主張 -->
-                    <div class="p-6">
+                    <!-- 價值主張 --><div class="p-6">
                         <div class="icon text-5xl mb-4"><i class="fa-solid fa-lightbulb"></i></div>
                         <h3 class="text-2xl font-bold text-white mb-3">價值主張 & 客群</h3>
                         <p class="text-gray-300"><strong>價值：</strong>杜絕八卦的「官方事實」、新粉無痛入門、創作者的事實查核工具。<br><strong>客群：</strong>新粉絲、內容創作者、媒體/品牌。</p>
                     </div>
-                    <!-- 夥伴 & 收益 -->
-                    <div class="p-6">
+                    <!-- 夥伴 & 收益 --><div class="p-6">
                         <div class="icon text-5xl mb-4"><i class="fa-solid fa-handshake"></i></div>
                         <h3 class="text-2xl font-bold text-white mb-3">夥伴 & 收益</h3>
                         <p class="text-gray-300"><strong>夥伴：</strong>大型粉絲站、K-pop 媒體、品牌廣告商、數據分析公司。<br><strong>收益：</strong>"Blink Plus" 訂閱 (B2C)、Media API 授權 (B2B)。</p>
                     </div>
-                    <!-- 活動 & 成本 -->
-                    <div class="p-6">
+                    <!-- 活動 & 成本 --><div class="p-6">
                         <div class="icon text-5xl mb-4"><i class="fa-solid fa-gears"></i></div>
                         <h3 class="text-2xl font-bold text-white mb-3">活動 & BlinkAI 成本</h3>
                         <p class="text-gray-300"><strong>關鍵活動：</strong>知識庫即時維護 (Comeback)、RAG 模型優化、B2B 夥伴關係拓展。<br><strong>成本：</strong>LLM API 運算成本、雲端主機、知識庫維護人力。</p>
@@ -382,58 +350,46 @@
             </div>
         </section>
 
-        <!-- 藍圖 (Roadmap) -->
-        <section id="roadmap" class="py-24 gradient-bg">
+        <!-- 藍圖 (Roadmap) --><section id="roadmap" class="py-24 gradient-bg">
             <div class="container mx-auto px-6">
                 <h2 class="section-title">願景與未來藍圖</h2>
                 <p class="section-subtitle">我們的願景：成為全球粉絲經濟中，最受信賴的 AI 驅動型「事實與互動」基礎設施。</p>
                 
                 <div class="relative max-w-4xl mx-auto">
-                    <!-- 時間軸線 -->
-                    <div class="absolute left-1/2 top-0 bottom-0 w-1 bg-gray-700 hidden md:block" style="transform: translateX(-50%);"></div>
+                    <!-- 時間軸線 --><div class="absolute left-1/2 top-0 bottom-0 w-1 bg-gray-700 hidden md:block" style="transform: translateX(-50%);"></div>
                     
-                    <!-- 節點 1: 2026 Q1 (Left) -->
-                    <div class="relative md:flex md:items-center md:space-x-8 mb-12">
+                    <!-- 節點 1: 2026 Q1 (Left) --><div class="relative md:flex md:items-center md:space-x-8 mb-12">
                         <div class="md:w-1/2 md:text-right">
                             <div class="p-6 glass-card rounded-2xl">
                                 <h3 class="text-2xl font-bold text-primary mb-2">2026 Q1: BlinkAI 1.0 啟動</h3>
                                 <p class="text-gray-300">BlinkAI 1.0 (Web, Discord) 啟動，核心知識庫上線。</p>
                             </div>
                         </div>
-                        <div class="absolute left-1/2 -translate-x-1/2 w-8 h-8 bg-primary rounded-full border-4 border-gray-900 hidden md:block"></div>
+                        <!-- 【修改點 3: 移除圓點】將圓點隱藏 --><div class="absolute left-1/2 -translate-x-1/2 w-8 h-8 bg-primary rounded-full border-4 border-gray-900 hidden"></div>
                         <div class="md:w-1/2"></div>
                     </div>
                     
-                    <!-- 節點 2: 2026 Q2 (Right) -->
-                    <div class="relative md:flex md:items-center md:space-x-8 mb-12">
-                        <div class="md:w-1/2"></div> <!-- Spacer on Left -->
-                        <div class="absolute left-1/2 -translate-x-1/2 w-8 h-8 bg-primary rounded-full border-4 border-gray-900 hidden md:block"></div>
-                        <div class="md:w-1/2"> <!-- Content on Right -->
-                            <div class="p-6 glass-card rounded-2xl">
+                    <!-- 節點 2: 2026 Q2 (Right) --><div class="relative md:flex md:items-center md:space-x-8 mb-12">
+                        <div class="md:w-1/2"></div> <!-- Spacer on Left --><!-- 【修改點 3: 移除圓點】將圓點隱藏 --><div class="absolute left-1/2 -translate-x-1/2 w-8 h-8 bg-primary rounded-full border-4 border-gray-900 hidden"></div>
+                        <div class="md:w-1/2"> <!-- Content on Right --><div class="p-6 glass-card rounded-2xl">
                                 <h3 class="text-2xl font-bold text-primary mb-2">2026 Q2: 擴展與訂閱</h3>
                                 <p class="text-gray-300">"Blink Plus" 訂閱制推出；擴展至 LINE 平台。</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- 節點 3: 2026 Q3 (Left) -->
-                    <div class="relative md:flex md:items-center md:space-x-8 mb-12">
-                        <div class="md:w-1/2 md:text-right"> <!-- Content on Left -->
-                            <div class="p-6 glass-card rounded-2xl">
+                    <!-- 節點 3: 2026 Q3 (Left) --><div class="relative md:flex md:items-center md:space-x-8 mb-12">
+                        <div class="md:w-1/2 md:text-right"> <!-- Content on Left --><div class="p-6 glass-card rounded-2xl">
                                 <h3 class="text-2xl font-bold text-primary mb-2">2026 Q3: B2B 與多模態</h3>
                                 <p class="text-gray-300">啟動 B2B API 授權計畫；導入多模態（以圖搜衣）Beta。</p>
                             </div>
                         </div>
-                        <div class="absolute left-1/2 -translate-x-1/2 w-8 h-8 bg-primary rounded-full border-4 border-gray-900 hidden md:block"></div>
-                        <div class="md:w-1/2"></div> <!-- Spacer on Right -->
-                    </div>
+                        <!-- 【修改點 3: 移除圓點】將圓點隱藏 --><div class="absolute left-1/2 -translate-x-1/2 w-8 h-8 bg-primary rounded-full border-4 border-gray-900 hidden"></div>
+                        <div class="md:w-1/2"></div> <!-- Spacer on Right --></div>
                     
-                    <!-- 節點 4: 2026 Q4 (Right) -->
-                    <div class="relative md:flex md:items-center md:space-x-8">
-                        <div class="md:w-1/2"></div> <!-- Spacer on Left -->
-                        <div class="absolute left-1/2 -translate-x-1/2 w-8 h-8 bg-primary rounded-full border-4 border-gray-900 hidden md:block"></div>
-                        <div class="md:w-1/2"> <!-- Content on Right -->
-                            <div class="p-6 glass-card rounded-2xl">
+                    <!-- 節點 4: 2026 Q4 (Right) --><div class="relative md:flex md:items-center md:space-x-8">
+                        <div class="md:w-1/2"></div> <!-- Spacer on Left --><!-- 【修改點 3: 移除圓點】將圓點隱藏 --><div class="absolute left-1/2 -translate-x-1/2 w-8 h-8 bg-primary rounded-full border-4 border-gray-900 hidden"></div>
+                        <div class="md:w-1/2"> <!-- Content on Right --><div class="p-6 glass-card rounded-2xl">
                                 <h3 class="text-2xl font-bold text-primary mb-2">2026 Q4: 驗證與複製</h3>
                                 <p class="text-gray-300">驗證模型並開始擴展至下一個 K-pop 團體 (e.g., ArmyAI)。</p>
                             </div>
@@ -443,8 +399,7 @@
             </div>
         </section>
 
-        <!-- Call to Action (CTA) - 保持註解狀態 -->
-        <!--
+        <!-- Call to Action (CTA) - 保持註解狀態 --><!--
         <section id="cta" class="py-32 hero-bg">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6">準備好體驗最準確的 AI 了嗎？</h2>
@@ -455,10 +410,7 @@
                 </form>
             </div>
         </section>
-        -->
-
-        <!-- Footer -->
-        <footer class="py-12 bg-gray-900">
+        --><!-- Footer --><footer class="py-12 bg-gray-900">
             <div class="container mx-auto px-6 text-center text-gray-400">
                 <p class="text-2xl font-bold text-primary mb-4">BlinkAI</p>
                 <div class="space-x-6 mb-4">
@@ -473,13 +425,11 @@
     </div>
 
 
-    <!-- 2. AI 助理視圖 (Chat Assistant) -->
-    <div id="chat-assistant" class="hidden p-6 md:p-12 min-h-screen">
+    <!-- 2. AI 助理視圖 (Chat Assistant) --><div id="chat-assistant" class="hidden p-6 md:p-12 min-h-screen">
         <div class="container mx-auto max-w-3xl">
             <div class="flex items-center justify-between mb-8">
                 <h1 class="text-3xl font-bold text-primary">BlinkAI 助理</h1>
-                <!-- 返回官網按鈕 -->
-                <a href="#" onclick="showLandingView(); return false;" class="text-gray-400 hover:text-primary transition-colors">&larr; 返回官網</a>
+                <!-- 返回官網按鈕 --><a href="#" onclick="showLandingView(); return false;" class="text-gray-400 hover:text-primary transition-colors">&larr; 返回官網</a>
             </div>
 
             <p class="text-gray-400 text-center mb-10">
@@ -488,25 +438,20 @@
                 試著問：<strong class="text-white">「BLACKPINK 的隊長是誰？」</strong>來體驗準確、有來源的回答。
             </p>
 
-            <!-- 聊天室窗口 -->
-            <div class="glass-card rounded-2xl shadow-2xl overflow-hidden flex flex-col" style="height: 70vh;">
-                <!-- 聊天室頭部 -->
-                <div class="p-4 bg-gray-900/50 border-b border-gray-700">
+            <!-- 聊天室窗口 --><div class="glass-card rounded-2xl shadow-2xl overflow-hidden flex flex-col" style="height: 70vh;">
+                <!-- 聊天室頭部 --><div class="p-4 bg-gray-900/50 border-b border-gray-700">
                     <h2 class="text-2xl font-bold text-white text-center">BlinkAI 助理</h2>
                 </div>
                 
-                <!-- 聊天內容 -->
-                <div id="chat-content" class="p-6 md:p-8 space-y-6 flex-1 overflow-y-auto">
-                    <!-- 初始歡迎訊息 -->
-                    <div class="chat-bubble ai-bubble">
+                <!-- 聊天內容 --><div id="chat-content" class="p-6 md:p-8 space-y-6 flex-1 overflow-y-auto">
+                    <!-- 初始歡迎訊息 --><div class="chat-bubble ai-bubble">
                         <p class="font-bold"><i class="fa-solid fa-check-circle mr-2"></i> BlinkAI 助理：</p>
                         <p>您好！我是 BlinkAI 助理。您可以問我任何關於 BLACKPINK 的問題。</p>
                         <p class="mt-2">試著問我：「隊長是誰？」</p>
                     </div>
                 </div>
 
-                <!-- 載入中指示器 -->
-                <div id="loading-indicator" class="p-4 text-center text-gray-400 hidden">
+                <!-- 載入中指示器 --><div id="loading-indicator" class="p-4 text-center text-gray-400 hidden">
                     <div class="loading-dots">
                         <span></span>
                         <span></span>
@@ -515,8 +460,7 @@
                     <span class="ml-2 text-sm">BlinkAI 正在思考中...</span>
                 </div>
 
-                <!-- 輸入框 -->
-                <form id="chat-form" class="p-4 bg-gray-900/50 border-t border-gray-700">
+                <!-- 輸入框 --><form id="chat-form" class="p-4 bg-gray-900/50 border-t border-gray-700">
                     <div class="flex items-center p-3 rounded-full bg-gray-800 border border-gray-700">
                         <input type="text" id="chat-input" placeholder="輸入您的問題..." class="bg-transparent text-white w-full focus:outline-none ml-2" autocomplete="off">
                         <button type"submit" id="send-button" class="bg-primary text-gray-900 rounded-full w-10 h-10 flex items-center justify-center ml-2 flex-shrink-0 transition-transform duration-200 hover:scale-110 active:scale-95">
@@ -528,8 +472,7 @@
         </div>
     </div>
 
-    <!-- 3. JavaScript 邏輯 (視圖切換與聊天室功能) -->
-    <script type="module">
+    <!-- 3. JavaScript 邏輯 (視圖切換與聊天室功能) --><script type="module">
         // ------------------------- 視圖切換邏輯 -------------------------
         const landingPage = document.getElementById('landing-page');
         const chatAssistant = document.getElementById('chat-assistant');
