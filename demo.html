@@ -9,102 +9,35 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #111827; /* 匹配官網的深藍黑背景 */
+            background-color: #111827;
         }
-        /* 美化捲軸 */
-        #chat-window::-webkit-scrollbar {
-            width: 6px;
-        }
-        #chat-window::-webkit-scrollbar-track {
-            background: #1f2937; /* 捲軸軌道顏色 */
-            border-radius: 10px;
-        }
-        #chat-window::-webkit-scrollbar-thumb {
-            background: #4b5563; /* 捲軸本體顏色 */
-            border-radius: 10px;
-        }
-        #chat-window::-webkit-scrollbar-thumb:hover {
-            background: #6b7280;
-        }
-        /* 聊天泡泡 */
-        .chat-bubble {
-            max-width: 75%;
-            padding: 12px 16px;
-            border-radius: 18px;
-            word-wrap: break-word;
-            line-height: 1.6;
-        }
-        .chat-bubble.user {
-            background-color: #f472b6; /* BLACKPINK 粉色 */
-            color: #1f2937; /* 深色文字 */
-            font-weight: 500;
-            border-bottom-right-radius: 4px;
-            align-self: flex-end;
-        }
-        .chat-bubble.ai {
-            background-color: #374151; /* 匹配官網卡片的深灰色 */
-            color: #d1d5db; /* 淺灰色文字 */
-            border-bottom-left-radius: 4px;
-            align-self: flex-start;
-        }
-        /* AI 正在輸入的動畫 */
-        .dot-flashing {
-            position: relative;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background-color: #9ca3af;
-            color: #9ca3af;
-            animation: dotFlashing 1s infinite linear alternate;
-            animation-delay: .5s;
-            margin: 0 4px;
-        }
-        .dot-flashing::before, .dot-flashing::after {
-            content: '';
-            display: inline-block;
-            position: absolute;
-            top: 0;
-        }
-        .dot-flashing::before {
-            left: -10px;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background-color: #9ca3af;
-            color: #9ca3af;
-            animation: dotFlashing 1s infinite alternate;
-            animation-delay: 0s;
-        }
-        .dot-flashing::after {
-            left: 10px;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background-color: #9ca3af;
-            color: #9ca3af;
-            animation: dotFlashing 1s infinite alternate;
-            animation-delay: 1s;
-        }
-        @keyframes dotFlashing {
-            0% { background-color: #9ca3af; }
-            50%, 100% { background-color: #6b7280; }
-        }
+        /* ... (您原有的所有 CSS 樣式) ... */
+        #chat-window::-webkit-scrollbar { width: 6px; }
+        #chat-window::-webkit-scrollbar-track { background: #1f2937; border-radius: 10px; }
+        #chat-window::-webkit-scrollbar-thumb { background: #4b5563; border-radius: 10px; }
+        #chat-window::-webkit-scrollbar-thumb:hover { background: #6b7280; }
+        .chat-bubble { max-width: 75%; padding: 12px 16px; border-radius: 18px; word-wrap: break-word; line-height: 1.6; }
+        .chat-bubble.user { background-color: #f472b6; color: #1f2937; font-weight: 500; border-bottom-right-radius: 4px; align-self: flex-end; }
+        .chat-bubble.ai { background-color: #374151; color: #d1d5db; border-bottom-left-radius: 4px; align-self: flex-start; }
+        .dot-flashing { position: relative; width: 6px; height: 6px; border-radius: 50%; background-color: #9ca3af; color: #9ca3af; animation: dotFlashing 1s infinite linear alternate; animation-delay: .5s; margin: 0 4px; }
+        .dot-flashing::before, .dot-flashing::after { content: ''; display: inline-block; position: absolute; top: 0; }
+        .dot-flashing::before { left: -10px; width: 6px; height: 6px; border-radius: 50%; background-color: #9ca3af; color: #9ca3af; animation: dotFlashing 1s infinite alternate; animation-delay: 0s; }
+        .dot-flashing::after { left: 10px; width: 6px; height: 6px; border-radius: 50%; background-color: #9ca3af; color: #9ca3af; animation: dotFlashing 1s infinite alternate; animation-delay: 1s; }
+        @keyframes dotFlashing { 0% { background-color: #9ca3af; } 50%, 100% { background-color: #6b7280; } }
     </style>
 </head>
 <body class="flex items-center justify-center min-h-screen">
 
     <div class="w-full max-w-lg bg-gray-900 rounded-lg shadow-xl overflow-hidden" style="height: 700px; display: flex; flex-direction: column;">
-        <!-- Header -->
+        <!-- ... (您原有的 Header) ... -->
         <header class="bg-gray-900 text-white p-4 flex items-center space-x-3 border-b border-gray-700">
-            <div class="w-12 h-12 rounded-full bg-pink-500 flex items-center justify-center text-xl font-bold text-gray-900">
-                B
-            </div>
+            <div class="w-12 h-12 rounded-full bg-pink-500 flex items-center justify-center text-xl font-bold text-gray-900"> B </div>
             <div>
                 <h1 class="text-xl font-bold">BlinkAI</h1>
                 <p class="text-sm text-gray-400">BLACKPINK 專屬助理</p>
             </div>
         </header>
-
+        
         <!-- Chat Window -->
         <div id="chat-window" class="flex-1 p-6 space-y-4 overflow-y-auto bg-gray-800" style="scroll-behavior: smooth;">
             <!-- Initial AI Message -->
@@ -126,7 +59,7 @@
             </div>
         </div>
 
-        <!-- Input Area -->
+        <!-- ... (您原有的 Footer 和 Input Area) ... -->
         <footer class="border-t border-gray-700 p-4 bg-gray-900">
             <div class="flex space-x-3">
                 <input 
@@ -140,7 +73,6 @@
                     id="send-button"
                     class="px-5 py-3 bg-pink-500 text-gray-900 font-semibold rounded-lg hover:bg-pink-400 focus:outline-none focus:ring-2 focus:ring-pink-300 disabled:opacity-50"
                 >
-                    <!-- 發送圖示 (已更換為紙飛機) -->
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                         <path d="M3.105 2.289a.75.75 0 00-.826.946l1.408 4.928A.75.75 0 004.42 8.5h4.862a.75.75 0 010 1.5H4.42a.75.75 0 00-.734.437l-1.408 4.928a.75.75 0 00.826.946l14.25-6.75a.75.75 0 000-1.418L3.105 2.289z" />
                     </svg>
@@ -158,41 +90,16 @@
         const sendButton = document.getElementById('send-button');
         const typingIndicator = document.getElementById('typing-indicator');
 
-        // --- RAG 核心：系統提示詞 (System Prompt) ---
-        // 這是我們模擬 RAG 知識庫的核心。
-        // AI 被告知只能使用這段 "context" (上下文) 來回答問題。
-        const systemPrompt = `
-            你是一個名叫 BlinkAI 的 AI 助理。
-            你的知識被嚴格限制在以下的 "BLACKPINK 核心事實" 中。
-            絕對不要回答任何與這些事實無關的問題，包括其他團體、成員的個人生活、猜測或任何你知識庫之外的事情。
-            如果用戶的問題無法從這些事實中得到解答，你必須禮貌地回答：「抱歉，我的知識範圍僅限於已驗證的 BLACKPINK 核心事實。」
-            你的回答必須簡潔並基於事實。
-
-            BLACKPINK 核心事實:
-            - 團體名稱: BLACKPINK
-            - 經紀公司: YG Entertainment
-            - 出道日期: 2016年8月8日
-            - 成員: 共四名，分別是 Jisoo, Jennie, Rosé, Lisa。
-            - Jisoo (지수): 擔當是領唱 (Lead Vocalist) 和門面 (Visual)。
-            - Jennie (제니): 擔當是主 Rapper (Main Rapper) 和領唱 (Lead Vocalist)。
-            - Rosé (로제): 擔當是主唱 (Main Vocalist) 和領舞 (Lead Dancer)。
-            - Lisa (리사): 擔當是主舞 (Main Dancer) 和 Rapper。
-            - 著名專輯: "The Album" (2020年發行), "Born Pink" (2022年發行)。
-            - 出道單曲: "Square One"，包含 "Boombayah" 和 "Whistle"。
-        `;
-
-        // FIX: chatHistory 只包含對話，systemPrompt 另外處理
+        // RAG 核心 (systemPrompt) 已移至後端
+        
         let chatHistory = [
-            // 這是 AI 的第一句歡迎詞
             { role: "model", parts: [{ text: "你好！我是 BlinkAI。\n\n你可以問我關於 BLACKPINK 的問題，例如成員的角色擔當、出道日期或專輯名稱。" }] }
         ];
 
-        // 將訊息添加到聊天室窗
+        // appendMessage 和 showTyping 函數保持不變...
         function appendMessage(sender, text) {
             const bubble = document.createElement('div');
             bubble.classList.add('chat-bubble', sender);
-            
-            // 處理換行符號
             bubble.innerHTML = text.replace(/\n/g, '<br>');
 
             const messageWrapper = document.createElement('div');
@@ -202,12 +109,9 @@
             }
             messageWrapper.appendChild(bubble);
             chatWindow.appendChild(messageWrapper);
-            
-            // 自動滾動到底部
             chatWindow.scrollTop = chatWindow.scrollHeight;
         }
 
-        // 顯示/隱藏 "正在輸入"
         function showTyping(isLoading) {
             if (isLoading) {
                 typingIndicator.classList.remove('hidden');
@@ -217,7 +121,7 @@
             }
         }
 
-        // 呼叫 Gemini AI
+        // --- 呼叫 API (已修改) ---
         async function callGemini(prompt) {
             sendButton.disabled = true;
             userInput.disabled = true;
@@ -226,74 +130,47 @@
             // 將用戶訊息添加到歷史紀錄
             chatHistory.push({ role: "user", parts: [{ text: prompt }] });
 
-            const apiKey = ""; // Canvas 會自動處理
-            // FIX: 修正 API URL (generativelanguage)
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+            // **已修改：呼叫我們自己的後端 API 路由**
+            const apiUrl = '/api/gemini'; 
             
-            // FIX: 遵守 Gemini API 格式，將 systemPrompt 放在 systemInstruction
+            // 我們只需要發送聊天記錄
             const payload = {
-                contents: chatHistory, // 這裡只包含 user/model 的對話
-                systemInstruction: {
-                    parts: [{ text: systemPrompt }]
-                }
+                chatHistory: chatHistory
             };
             
             try {
-                // 指數退避重試
-                let response;
-                let retries = 0;
-                const maxRetries = 5;
-                let delay = 1000; // 1 second
-
-                while (retries < maxRetries) {
-                    response = await fetch(apiUrl, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(payload)
-                    });
-
-                    // 429: 資源耗盡 (Too Many Requests)
-                    // 5xx: 伺服器錯誤
-                    if (response.status === 429 || response.status >= 500) {
-                        retries++;
-                        // console.log(`Retrying... (${retries}/${maxRetries})`);
-                        await new Promise(resolve => setTimeout(resolve, delay));
-                        delay *= 2; // 指數增長
-                    } else {
-                        break; // 成功或遇到非重試錯誤
-                    }
-                }
-
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
 
                 if (!response.ok) {
-                    throw new Error(`API 錯誤: ${response.status} ${response.statusText}`);
+                    // 處理來自後端的錯誤
+                    const errData = await response.json();
+                    throw new Error(errData.error || `伺服器錯誤: ${response.status}`);
                 }
 
-                const result = await response.json();
-                const aiResponse = result.candidates?.[0]?.content?.parts?.[0]?.text;
+                const result = await response.json(); // { aiResponse: "..." } 或 { safetyMessage: "..." }
 
-                if (aiResponse) {
-                    // 將 AI 回應添加到歷史紀錄
+                if (result.aiResponse) {
+                    // 成功
+                    const aiResponse = result.aiResponse;
                     chatHistory.push({ role: "model", parts: [{ text: aiResponse }] });
                     appendMessage('ai', aiResponse);
-                } else if (result.candidates?.[0]?.finishReason === 'SAFETY') {
-                    // 處理安全設定阻擋
-                    const safetyMessage = '抱歉，這個問題觸發了安全機制，我無法回答。';
-                    chatHistory.push({ role: "model", parts: [{ text: safetyMessage }] });
-                    appendMessage('ai', safetyMessage);
-                } 
-                else {
-                    // 處理其他未預期情況
-                    const errorMessage = '抱歉，我無法處理這個請求。';
-                    console.error("Unknown API response:", result); // 紀錄未預期的回應
-                    chatHistory.push({ role: "model", parts: [{ text: errorMessage }] });
+                } else if (result.safetyMessage) {
+                    // 處理安全阻擋
+                    chatHistory.push({ role: "model", parts: [{ text: result.safetyMessage }] });
+                    appendMessage('ai', result.safetyMessage);
+                } else {
+                    // 處理其他後端錯誤
+                    const errorMessage = result.error || '抱歉，我無法處理這個請求。';
                     appendMessage('ai', errorMessage);
                 }
 
             } catch (error) {
-                console.error("Gemini Call 失敗:", error);
+                console.error("Call 失敗:", error);
                 const errorMessage = `發生錯誤: ${error.message}`;
-                // 不將錯誤訊息加入歷史紀錄，避免 AI 混淆
                 appendMessage('ai', errorMessage);
             } finally {
                 sendButton.disabled = false;
@@ -303,7 +180,7 @@
             }
         }
 
-        // 處理發送
+        // --- 監聽事件 (保持不變) ---
         async function handleSend() {
             const prompt = userInput.value.trim();
             if (prompt) {
@@ -313,11 +190,10 @@
             }
         }
 
-        // 監聽事件
         sendButton.addEventListener('click', handleSend);
         userInput.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' && !e.shiftKey) { // 按 Enter 發送
-                e.preventDefault(); // 防止換行
+            if (e.key === 'Enter' && !e.shiftKey) { 
+                e.preventDefault();
                 handleSend();
             }
         });
