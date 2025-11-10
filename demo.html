@@ -140,10 +140,9 @@
                     id="send-button"
                     class="px-5 py-3 bg-pink-500 text-gray-900 font-semibold rounded-lg hover:bg-pink-400 focus:outline-none focus:ring-2 focus:ring-pink-300 disabled:opacity-50"
                 >
-                    <!-- 發送圖示 -->
+                    <!-- 發送圖示 (已更換為紙飛機) -->
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-                        <path d="M3.105 3.105a.5.5 0 01.83-.09l11.204 11.203-1.06 1.061-11.205-11.203a.5.5 0 01.23-.73z" clip-rule="evenodd" />
-                        <path d="M4.23 3.321a.5.5 0 01.628-.095l11.204 11.203-1.06 1.06-11.204-11.203a.5.5 0 01.228-.73z" clip-rule="evenodd" />
+                        <path d="M3.105 2.289a.75.75 0 00-.826.946l1.408 4.928A.75.75 0 004.42 8.5h4.862a.75.75 0 010 1.5H4.42a.75.75 0 00-.734.437l-1.408 4.928a.75.75 0 00.826.946l14.25-6.75a.75.75 0 000-1.418L3.105 2.289z" />
                     </svg>
                 </button>
             </div>
@@ -182,11 +181,10 @@
             - 出道單曲: "Square One"，包含 "Boombayah" 和 "Whistle"。
         `;
 
+        // FIX: chatHistory 只包含對話，systemPrompt 另外處理
         let chatHistory = [
-             // 系統提示詞是 RAG 模擬的關鍵
-             { role: "system", parts: [{ text: systemPrompt }] },
-             // 這是 AI 的第一句歡迎詞
-             { role: "model", parts: [{ text: "你好！我是 BlinkAI。\n\n你可以問我關於 BLACKPINK 的問題，例如成員的角色擔當、出道日期或專輯名稱。" }] }
+            // 這是 AI 的第一句歡迎詞
+            { role: "model", parts: [{ text: "你好！我是 BlinkAI。\n\n你可以問我關於 BLACKPINK 的問題，例如成員的角色擔當、出道日期或專輯名稱。" }] }
         ];
 
         // 將訊息添加到聊天室窗
@@ -229,11 +227,15 @@
             chatHistory.push({ role: "user", parts: [{ text: prompt }] });
 
             const apiKey = ""; // Canvas 會自動處理
-            const apiUrl = `https://generativelace.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+            // FIX: 修正 API URL (generativelanguage)
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
             
-            // 確保 system prompt 總是在 payload 的最前面
+            // FIX: 遵守 Gemini API 格式，將 systemPrompt 放在 systemInstruction
             const payload = {
-                contents: chatHistory
+                contents: chatHistory, // 這裡只包含 user/model 的對話
+                systemInstruction: {
+                    parts: [{ text: systemPrompt }]
+                }
             };
             
             try {
@@ -283,12 +285,13 @@
                 else {
                     // 處理其他未預期情況
                     const errorMessage = '抱歉，我無法處理這個請求。';
+                    console.error("Unknown API response:", result); // 紀錄未預期的回應
                     chatHistory.push({ role: "model", parts: [{ text: errorMessage }] });
                     appendMessage('ai', errorMessage);
                 }
 
             } catch (error) {
-                console.error("Gemini Cll 失敗:", error);
+                console.error("Gemini Call 失敗:", error);
                 const errorMessage = `發生錯誤: ${error.message}`;
                 // 不將錯誤訊息加入歷史紀錄，避免 AI 混淆
                 appendMessage('ai', errorMessage);
