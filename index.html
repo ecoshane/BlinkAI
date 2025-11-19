@@ -1190,7 +1190,8 @@ const sendButton = document.getElementById('send-button');
 const loadingIndicator = document.getElementById('loading-indicator');
 
 // **重要：API 配置 - 指向您的本地 Flask 後端**
-const API_BASE_URL = "https://22001361fe6f.ngrok-free.app";
+//const API_BASE_URL = "https://22001361fe6f.ngrok-free.app";
+const API_BASE_URL = window.location.origin;
 const API_CHAT_ENDPOINT = `${API_BASE_URL}/api/chat`;
 
 
